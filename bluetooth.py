@@ -41,10 +41,19 @@ class SendKeycode:
     def DebugPopinSendKey(self.send_string):
         popinSendKey(self,send_string)
 
-    def writeText(self,filePath,text):
+    def writeText(filePath,text):
         with open(filePath, mode='a') as f:
-            f.write(text+"\n")
-        
+        f.write(text+"\n")
+
+    #create a txt file for debugging (in startup).
+    #change global inv "debugfilePath"
+    def createFile():
+        global debugFilePath
+        nowtime= datetime.datetime.now().strftime('%Y-%m-%d_%H_%M_%S')
+        debugFilePath=debugFilePath+nowtime+".txt"
+        print(debugFilePath)
+        with open(debugFilePath,mode='x') as f:
+            f.write("")
 
 
 if __name__ == '__main__':
