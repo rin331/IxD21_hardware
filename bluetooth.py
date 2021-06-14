@@ -44,7 +44,7 @@ class SendKeycode:
     def writeText(self,filePath,text):
         with open(filePath, mode='a') as f:
             f.write(text+"\n")
-
+        
 
 
 if __name__ == '__main__':
